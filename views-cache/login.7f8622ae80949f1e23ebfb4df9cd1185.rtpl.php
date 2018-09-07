@@ -46,6 +46,7 @@
         <div class="col-xs-12">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Acessar</button>
         </div>
+        
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
@@ -58,7 +59,6 @@
         <!-- /.col -->
       </div>
     </form>
-
     <a href="/admin/forgot">Esqueceu a senha?</a><br>
     <a href="#" class="text-center">Crie uma conta</a>
 

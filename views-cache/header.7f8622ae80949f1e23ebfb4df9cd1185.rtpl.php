@@ -264,56 +264,228 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li>
-              <a href="/admin/users"><i class="fa fa-user"></i> Usuários</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-users"></i> Clientes</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Fornecedores</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-dropbox"></i> Produtos</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Usuários</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Usuários</a>
+            <li><a href="/admin/users"><i class="fa fa-circle-o"></i> Usuários</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Funcionários</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Clientes</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Transportadoras</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Configurações
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Tipo de Contato</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Tido de Cliente</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Tipo de Endereço</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
             </li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-money"></i> <span> Vendas</span>
+            <i class="fa fa-gear"></i> <span> Produto</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li>
-              <a href="/admin/users"><i class="fa fa-user"></i> Usuários</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Clientes</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Fornecedores</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Produtos</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Usuários</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-user"></i> Usuários</a>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Configurações
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+              </ul>
             </li>
           </ul>
         </li>
         
-      </ul>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-money"></i> <span> Financeiro</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Contas a Receber</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Opções Financeiras
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Caixa</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Forma de Pagamento</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Plano de Conta</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Centro de Custo</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Transferências</a></li>
+              </ul>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Categorias</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Nota Fiscal</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href=""><i class="fa fa-circle-o"></i> Usuários
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="/admin/users"><i class="fa fa-circle-o"></i> Listar Usuários
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Tipo de Usuário
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Clientes
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Tipo de Cliente
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Fornecedores
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Tipo de Fornecedor
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Produtos
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Tipo de Produto
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> xxxxxx
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Tipo de xxxxxx
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
