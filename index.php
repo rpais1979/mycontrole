@@ -2,10 +2,12 @@
 session_start();
 require_once("vendor/autoload.php");
 
+
 use \Slim\Slim;
 use \Mycontrole\Page;
 use \Mycontrole\PageAdmin;
 use \Mycontrole\Model\User;
+use \Mycontrole\Model\ContactType;
 
 
 $app = new Slim();
@@ -13,6 +15,8 @@ $app = new Slim();
 $app->config('debug', true);
 
 $app->get('/', function() {
+
+	User::verifyLogin();
     
 	$page = new Page();
 
@@ -228,6 +232,88 @@ $app->post("/admin/forgot/reset", function(){
 
 });
 
+$app->get('/admin/contacttype', function() {
+
+	User::verifyLogin();
+
+	$contacttypes = ContactType::listAll();
+
+	$page = new PageAdmin();
+
+	$page->setTpl('contacttype', array('contacttypes'=>$contacttypes));
+
+});
+
+$app->get("/admin/contacttype/create", function(){
+
+	User::verifyLogin();
+	
+	$page = new Mycontrole\PageAdmin();
+
+	$page->setTpl("contacttype-create");
+
+});
+
+$app->post("/admin/contacttype/create", function(){
+
+	User::verifyLogin();
+
+	$contacttypes = new ContactType();
+
+	$contacttypes->setData($_POST);
+
+	$contacttypes->save();
+
+	header("Location: /admin/contacttype");
+	exit;	
+
+});
+
+$app->get("/admin/contacttype/:idcontacttype/delete", function($idcontacttype){
+
+	User::verifyLogin();
+
+	$contacttype = new ContactType();
+
+	$contacttype->get((int)$idcontacttype);
+
+	$contacttype->delete();
+
+	header("Location: /admin/contacttype");
+	exit;
+});
+
+$app->get("/admin/contacttype/:idcontacttype", function($idcontacttype){
+
+	User::verifyLogin();
+
+	$contacttypes = new ContactType();
+
+	$contacttypes->get((int)$idcontacttype);	
+
+	$page = new Mycontrole\PageAdmin();
+
+	$page->setTpl("contacttype-update", array("contacttypes"=>$contacttypes->getValues()
+	));
+});
+
+$app->post("/admin/contacttype/:idcontacttype", function($idcontacttype){
+
+	User::verifyLogin();
+
+	$contacttypes = new ContactType();
+
+	$contacttypes->get((int)$idcontacttype);
+
+	$contacttypes->setData($_POST);
+
+	$contacttypes->save();
+
+	header("Location: /admin/contacttype");
+	exit;	
+	
+});
+
 $app->run();
 
- ?>
+?>

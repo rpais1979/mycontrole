@@ -265,7 +265,7 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="/admin/users"><i class="fa fa-circle-o"></i> Usuários</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Funcionários</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Funcionários</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Clientes</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Transportadoras</a></li>
@@ -276,7 +276,7 @@ desired effect
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Tipo de Contato</a></li>
+                <li><a href="/admin/contacttype"><i class="fa fa-circle-o"></i> Tipo de Contato</a></li>
               </ul>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Tido de Cliente</a></li>
