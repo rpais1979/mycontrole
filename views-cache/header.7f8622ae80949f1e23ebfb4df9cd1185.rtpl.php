@@ -234,7 +234,7 @@ desired effect
           <img src="vendor/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Rodrio Pais</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -265,8 +265,8 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="/admin/users"><i class="fa fa-circle-o"></i> Usuários</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Funcionários</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Clientes</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Funcionários</a></li>
+            <li><a href="/admin/client"><i class="fa fa-circle-o"></i> Clientes</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Transportadoras</a></li>
             <li class="treeview">
@@ -299,11 +299,12 @@ desired effect
         <li class="treeview">
           <a href="#">
             <i class="fa fa-gear"></i> <span> Produto</span>
-            <span class="pull-right-container">
+            <span class="pull-right-container"> 
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Incluir Produto</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>
@@ -316,7 +317,7 @@ desired effect
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+                <li><a href="/admin/categories"><i class="fa fa-circle-o"></i> Categoria</a></li>
               </ul>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>

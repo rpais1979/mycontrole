@@ -1,0 +1,242 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Usuários
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="/admin/users">Usuários</a></li>
+            <li class="active"><a href="/admin/users/create">Cadastrar</a></li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Dados Gerais</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <form role="form" action="/admin/users/create" method="post">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="desperson">Nome</label>
+                                    <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Digite o nome">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="deslogin">Nome Fantasia</label>
+                                    <input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Digite o login"> 
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="nrphone">Código</label>
+                                    <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone">
+                                </div>
+                            </div>
+                            <div class="form-group"> 
+                                <div class="col-sm-2">
+                                    <label for="exampleInputEmail1">Contribuinte</label>
+                                    <select class="form-control" name="contribuinte_id">
+                                        <option value="">Selecione...</option>
+                                        <option value="1">Não Informado</option>
+                                        <option value="2">Contribuinte ICMS</option>
+                                        <option value="3">Contribuinte isente de Incrição no cadastro de Contribuintes do ICMS</option>
+                                        <option value="4">Não Contribuinte, que pode ou não possuir Incrição Estadual no Cadastro de </option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="exampleInputEmail1">Tipo de pessoa</label>
+                                    <select id="tipo_pessoa" class="form-control" name="tipo_pessoa" onchange="valor(this.value);">
+                                        <option value="cnpj">Pessoa jurídica</option>
+                                        <option value="cpf">Pessoa física</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label id="cnpj" style="display:none;">CNPJ</label>
+                                    <input type="text" name="cnpj" class="form-control" placeholder="CNPJ" style="display:none;">
+                                    <label id="cpf" style="display:none;">CPF</label>
+                                    <input type="text" name="cpf" class="form-control" placeholder="CPF" style="display:none;">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label id="ie" style="display:none;">Inscrição Estadual</label>
+                                    <input type="text" name="ie" class="form-control" placeholder="IE" style="display:none;">
+                                    <label id="rg" style="display:none;">RG</label>
+                                    <input type="text" name="rg" class="form-control" placeholder="RG" style="display:none;">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label id="im" style="display:none;">Inscrição Municipal</label>
+                                    <input type="text" name="im" class="form-control" placeholder="IM" style="display:none;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label for="desemail">E-mail</label>
+                                    <input type="email" class="form-control" id="desemail" name="desemail" placeholder="Digite o e-mail">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label for="desemail">E-mail</label>
+                                    <input type="email" class="form-control" id="desemail" name="desemail" placeholder="Digite o e-mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-success">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Endereço</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label>CEP</label>
+                                        <input type="text" name="cep" class="form-control" id="cep" placeholder="Cep" size="8" maxlength="8" onblur="pesquisacep(this.value);" value="">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label for="exampleInputEmail1">Endereço</label>
+                                        <input type="text" name="rua" class="form-control" id="rua" placeholder="Endereço" value="">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="exampleInputEmail1">Número</label>
+                                        <input type="text" name="numero" class="form-control" id="numero" placeholder="Número" value="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="exampleInputEmail1">Complemento</label>
+                                        <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Complemento" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        <label for="exampleInputEmail1">Bairro</label>
+                                        <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" value="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="exampleInputEmail1">Município</label>
+                                        <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Município" value="">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <label for="exampleInputEmail1">UF</label>
+                                        <select class="form-control" name="uf" id="uf">
+                                            <option value="">...</option>
+                                            <option value="AC" >AC</option>
+                                            <option value="AL" >AL</option>
+                                            <option value="AM" >AM</option>
+                                            <option value="AP" >AP</option>
+                                            <option value="BA" >BA</option>
+                                            <option value="CE" >CE</option>
+                                            <option value="DF" >DF</option>
+                                            <option value="ES" >ES</option>
+                                            <option value="EX" >EX</option>
+                                            <option value="GO" >GO</option>
+                                            <option value="MA" >MA</option>
+                                            <option value="MG" >MG</option>
+                                            <option value="MS" >MS</option>
+                                            <option value="MT" >MT</option>
+                                            <option value="PA" >PA</option>
+                                            <option value="PB" >PB</option>
+                                            <option value="PE" >PE</option>
+                                            <option value="PI" >PI</option>
+                                            <option value="PR" >PR</option>
+                                            <option value="RJ" >RJ</option>
+                                            <option value="RN" >RN</option>
+                                            <option value="RO" >RO</option>
+                                            <option value="RR" >RR</option>
+                                            <option value="RS" >RS</option>
+                                            <option value="SC" >SC</option>
+                                            <option value="SE" >SE</option>
+                                            <option value="SP" >SP</option>
+                                            <option value="TO" >TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box box-success">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Cados do Contato</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1">Fone</label>
+                                            <input type="text" name='telefone_fixo' class="form-control" id="telefone_fixo" placeholder="Fixo" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Fax</label>
+                                            <input type="text" name='telefone_fax' class="form-control" id="telefone_fax" placeholder="Fax" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Celular</label>
+                                            <input type="text" name='telefone_celular' class="form-control" id="telefone_celular" placeholder="Celular" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1">WebSite</label>
+                                            <input type="text" name='website' class="form-control" id="website" placeholder="WebSite" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">E-mail</label>
+                                            <input type="email" name='email' class="form-control" id="email" placeholder="E-mail" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">E-mail para envio de NFe</label>
+                                            <input type="email" name='email_nfe' class="form-control" id="email_nfe" placeholder="E-mail para envio de NFe" value="">
+                                        </div>
+                                    </div>
+                                    <div style="padding-top:110px;">
+                                        <span style="font-size: 20px;">Pessoas de contato</span>
+                                    </div>
+                                    <div style="padding-top:10px;"></div>
+
+                                    <div class="table table-bordered table-hover"></div>
+                                     <div style="padding-top:10px;"></div>
+                                    <div class="form-group">
+                                        <div class="col-sm-4">
+                                            <label for="exampleInputEmail1">Nome</label>
+                                            <input type="text" name='nome_contato' class="form-control" id="nome_contato" placeholder="Nome Contato" value="
+                                                   ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">Setor</label>
+                                            <input type="text" name='setor_contato' class="form-control" id="setor_contato" placeholder="Setor" value="
+                                                   ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">E-mail</label>
+                                            <input type="email" name='email_contato' class="form-control" id="email_contato" placeholder="E-mail" value="
+                                                   ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">Telefone</label>
+                                            <input type="text" name='telefone_contato' class="form-control" id="telefone_contato" placeholder="Telefone" value="
+                                                   ">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">Ramal</label>
+                                            <input type="text" name='ramal' class="form-control" id="ramal" placeholder="Ramal" value="
+                                                   ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-default">Cancel</button>
+                                    <button type="submit" class="btn btn-info">Sign in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
