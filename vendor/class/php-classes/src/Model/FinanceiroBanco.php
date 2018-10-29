@@ -2,11 +2,11 @@
 
 namespace Mycontrole\Model;
 
-use \Mycontrole\DB\Sql;	
+use \Mycontrole\DB\Sql;
 use \Mycontrole\Model;
 use \Mycontrole\Mailer;
 
-class Clients extends Model {
+class FinanceiroCategoria extends Model {
 	
 
 	public static function listAll(){

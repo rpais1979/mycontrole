@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -25,135 +25,134 @@
                         <li><a href="#tab_2" data-toggle="tab">Dados Contato</a></li>
                         <li><a href="#tab_3" data-toggle="tab">Dados Complementares</a></li>
                         <li><a href="#tab_4" data-toggle="tab">Observações</a></li>
+                        <li><a href="#tab_5" data-toggle="tab">Teste</a></li>
                         <!--                        <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>-->
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
                             <div style="padding-top:5px;">
                                 <form class="form-horizontal" name="form_dados_pessoais" action="" method="POST">
-                                    <div class="box-body">
-                                        <div class="form-group">
-                                            <div class="col-md-6">
-                                                <label for="desperson">Nome</label>
-                                                <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Digite o nome">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <label for="deslogin">Nome Fantasia</label>
-                                                <input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Digite o login"> 
-                                            </div>
-                                            <div class="col-md-3">
-                                                <label for="nrphone">Código</label>
-                                                <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone">
-                                            </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label for="desperson">Nome</label>
+                                            <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Digite o nome">
                                         </div>
-                                        <div class="form-group"> 
-                                            <div class="col-sm-2">
-                                                <label for="exampleInputEmail1">Contribuinte</label>
-                                                <select class="form-control" name="contribuinte_id">
-                                                    <option value="">Selecione...</option>
-                                                    <option value="1">Não Informado</option>
-                                                    <option value="2">Contribuinte ICMS</option>
-                                                    <option value="3">Contribuinte isente de Incrição no cadastro de Contribuintes do ICMS</option>
-                                                    <option value="4">Não Contribuinte, que pode ou não possuir Incrição Estadual no Cadastro de </option>
-
-                                                </select>
-                                            </div>
-
-                                            <div class="col-sm-3">
-                                                <label for="exampleInputEmail1">Tipo de pessoa</label>
-                                                <select id="tipo_pessoa" class="form-control" name="tipo_pessoa" onchange="valor(this.value);">
-                                                    <option value="cnpj">Pessoa jurídica</option>
-                                                    <option value="cpf">Pessoa física</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <label id="cnpj" style="display:none;">CNPJ</label>
-                                                <input type="text" name="cnpj" class="form-control" placeholder="CNPJ" style="display:none;">
-                                                <label id="cpf" style="display:none;">CPF</label>
-                                                <input type="text" name="cpf" class="form-control" placeholder="CPF" style="display:none;">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <label id="ie" style="display:none;">Inscrição Estadual</label>
-                                                <input type="text" name="ie" class="form-control" placeholder="IE" style="display:none;">
-                                                <label id="rg" style="display:none;">RG</label>
-                                                <input type="text" name="rg" class="form-control" placeholder="RG" style="display:none;">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <label id="im" style="display:none;">Inscrição Municipal</label>
-                                                <input type="text" name="im" class="form-control" placeholder="IM" style="display:none;">
-                                            </div>
+                                        <div class="col-md-3">
+                                            <label for="deslogin">Nome Fantasia</label>
+                                            <input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Digite o login"> 
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="nrphone">Código</label>
+                                            <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone">
                                         </div>
                                     </div>
+                                    <div class="form-group"> 
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">Contribuinte</label>
+                                            <select class="form-control" name="contribuinte_id">
+                                                <option value="">Selecione...</option>
+                                                <option value="1">Não Informado</option>
+                                                <option value="2">Contribuinte ICMS</option>
+                                                <option value="3">Contribuinte isente de Incrição no cadastro de Contribuintes do ICMS</option>
+                                                <option value="4">Não Contribuinte, que pode ou não possuir Incrição Estadual no Cadastro de </option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Tipo de pessoa</label>
+                                            <select id="tipo_pessoa" class="form-control" name="tipo_pessoa" onchange="valor(this.value);">
+                                                <option value="cnpj">Pessoa jurídica</option>
+                                                <option value="cpf">Pessoa física</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label id="cnpj" style="display:none;">CNPJ</label>
+                                            <input type="text" name="cnpj" class="form-control" placeholder="CNPJ" style="display:none;">
+                                            <label id="cpf" style="display:none;">CPF</label>
+                                            <input type="text" name="cpf" class="form-control" placeholder="CPF" style="display:none;">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label id="ie" style="display:none;">Inscrição Estadual</label>
+                                            <input type="text" name="ie" class="form-control" placeholder="IE" style="display:none;">
+                                            <label id="rg" style="display:none;">RG</label>
+                                            <input type="text" name="rg" class="form-control" placeholder="RG" style="display:none;">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label id="im" style="display:none;">Inscrição Municipal</label>
+                                            <input type="text" name="im" class="form-control" placeholder="IM" style="display:none;">
+                                        </div>
+                                    </div>
+
                                     <span style="font-size:20px;">Endereço</span>
                                     <div class="table table-bordered table-hover"></div>
-                                    <div class="box-body">
-                                        <div class="form-group">
-                                            <div class="col-sm-2">
-                                                <label>CEP</label>
-                                                <input type="text" name="cep" class="form-control" id="cep" placeholder="Cep" size="8" maxlength="8" onblur="pesquisacep(this.value);" value="">
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <label for="exampleInputEmail1">Endereço</label>
-                                                <input type="text" name="rua" class="form-control" id="rua" placeholder="Endereço" value="">
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <label for="exampleInputEmail1">Número</label>
-                                                <input type="text" name="numero" class="form-control" id="numero" placeholder="Número" value="">
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <label for="exampleInputEmail1">Complemento</label>
-                                                <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Complemento" value="">
-                                            </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+                                            <label>CEP</label>
+                                            <input type="text" name="cep" class="form-control" id="cep" placeholder="Cep" size="8" maxlength="8" onblur="pesquisacep(this.value);" value="">
                                         </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-3">
-                                                <label for="exampleInputEmail1">Bairro</label>
-                                                <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" value="">
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <label for="exampleInputEmail1">Município</label>
-                                                <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Município" value="">
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <label for="exampleInputEmail1">UF</label>
-                                                <select class="form-control" name="uf" id="uf">
-                                                    <option value="">...</option>
-                                                    <option value="AC" >AC</option>
-                                                    <option value="AL" >AL</option>
-                                                    <option value="AM" >AM</option>
-                                                    <option value="AP" >AP</option>
-                                                    <option value="BA" >BA</option>
-                                                    <option value="CE" >CE</option>
-                                                    <option value="DF" >DF</option>
-                                                    <option value="ES" >ES</option>
-                                                    <option value="EX" >EX</option>
-                                                    <option value="GO" >GO</option>
-                                                    <option value="MA" >MA</option>
-                                                    <option value="MG" >MG</option>
-                                                    <option value="MS" >MS</option>
-                                                    <option value="MT" >MT</option>
-                                                    <option value="PA" >PA</option>
-                                                    <option value="PB" >PB</option>
-                                                    <option value="PE" >PE</option>
-                                                    <option value="PI" >PI</option>
-                                                    <option value="PR" >PR</option>
-                                                    <option value="RJ" >RJ</option>
-                                                    <option value="RN" >RN</option>
-                                                    <option value="RO" >RO</option>
-                                                    <option value="RR" >RR</option>
-                                                    <option value="RS" >RS</option>
-                                                    <option value="SC" >SC</option>
-                                                    <option value="SE" >SE</option>
-                                                    <option value="SP" >SP</option>
-                                                    <option value="TO" >TO</option>
-                                                </select>
-                                            </div>
+                                        <div class="col-sm-5">
+                                            <label for="exampleInputEmail1">Endereço</label>
+                                            <input type="text" name="rua" class="form-control" id="rua" placeholder="Endereço" value="">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="exampleInputEmail1">Número</label>
+                                            <input type="text" name="numero" class="form-control" id="numero" placeholder="Número" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Complemento</label>
+                                            <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Complemento" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Bairro</label>
+                                            <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro" value="">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="exampleInputEmail1">Município</label>
+                                            <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Município" value="">
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <label for="exampleInputEmail1">UF</label>
+                                            <select class="form-control" name="uf" id="uf">
+                                                <option value="">...</option>
+                                                <option value="AC" >AC</option>
+                                                <option value="AL" >AL</option>
+                                                <option value="AM" >AM</option>
+                                                <option value="AP" >AP</option>
+                                                <option value="BA" >BA</option>
+                                                <option value="CE" >CE</option>
+                                                <option value="DF" >DF</option>
+                                                <option value="ES" >ES</option>
+                                                <option value="EX" >EX</option>
+                                                <option value="GO" >GO</option>
+                                                <option value="MA" >MA</option>
+                                                <option value="MG" >MG</option>
+                                                <option value="MS" >MS</option>
+                                                <option value="MT" >MT</option>
+                                                <option value="PA" >PA</option>
+                                                <option value="PB" >PB</option>
+                                                <option value="PE" >PE</option>
+                                                <option value="PI" >PI</option>
+                                                <option value="PR" >PR</option>
+                                                <option value="RJ" >RJ</option>
+                                                <option value="RN" >RN</option>
+                                                <option value="RO" >RO</option>
+                                                <option value="RR" >RR</option>
+                                                <option value="RS" >RS</option>
+                                                <option value="SC" >SC</option>
+                                                <option value="SE" >SE</option>
+                                                <option value="SP" >SP</option>
+                                                <option value="TO" >TO</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-4">
                                             <input type="submit" class="btn btn-success" value="Cadastrar" name="SendCadCliente">
-                                            <a href="<?php echo pg . '/listar/list_fin_contas_pagar' ?>"><button type="button" class="btn btn-default">Cancelar</button></a>
+                                            <a href="&lt;?php echo pg . '/listar/list_fin_contas_pagar' ?&gt;"><button type="button" class="btn btn-default">Cancelar</button></a>
                                         </div>
                                     </div>
                                 </form>
@@ -161,8 +160,8 @@
                         </div>
                         <!-- /.tab-pane -->
                         <div class="tab-pane" id="tab_2">
-                            <div style="padding-top:20px;">
-                                <form class="form-horizontal" class="form-horizontal" action="" method="POST">
+                            <div style="padding-top:5px;">
+                                <form class="form-horizontal" action="" method="POST">
                                     <div class="form-group">
                                         <div class="col-sm-6">
                                             <label for="exampleInputEmail1">Fone</label>
@@ -191,28 +190,51 @@
                                             <input type="email" name='email_nfe' class="form-control" id="email_nfe" placeholder="E-mail para envio de NFe" value="">
                                         </div>
                                     </div>
-                                    <span style="font-size: 20px;">Pessoas de contato</span>
-                                    <div class="table table-bordered table-hover"></div>
-                                    <div class="form-group">
-                                        <div class="col-sm-4">
-                                            <label for="exampleInputEmail1">Nome</label>
-                                            <input type="text" name='nome_contato' class="form-control" id="nome_contato" placeholder="Nome Contato" value="">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="exampleInputEmail1">Setor</label>
-                                            <input type="text" name='setor_contato' class="form-control" id="setor_contato" placeholder="Setor" value="">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="exampleInputEmail1">E-mail</label>
-                                            <input type="email" name='email_contato' class="form-control" id="email_contato" placeholder="E-mail" value="">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="exampleInputEmail1">Telefone</label>
-                                            <input type="text" name='telefone_contato' class="form-control" id="telefone_contato" placeholder="Telefone" value="">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="exampleInputEmail1">Ramal</label>
-                                            <input type="text" name='ramal' class="form-control" id="ramal" placeholder="Ramal" value="">
+                                    <div id="dados_pessoais"></div>
+                                    <div class="box-header with-border">
+                                        <span style="font-size: 20px;">Pessoas de contato</span>
+                                    </div>
+                                    <div class="table table-bordered  table-hover"></div>   
+                                    <!-- /.box-header -->
+                                    <div class="clear"></div>
+                                    <div class="box-body">                                        
+                                        <table class="table table-bordered  table-hover" id="tab_logic">
+                                            <tr>
+                                                <th style="width: 10px">#</th>
+                                                <th class="text-center">Nome</th>
+                                                <th class="text-center">Setor</th>
+                                                <th class="text-center">E-mail</th>
+                                                <th class="text-center">Telefone</th>
+                                                <th class="text-center" style="width: 100px">Ramal</th>
+                                            </tr>
+                                            <tr id='add0'>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    <input type="text" name='name0' placeholder="Nome" class="form-control"/>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name='setor0' placeholder="Setor" class="form-control"/>
+                                                </td> 
+                                                <td>
+                                                    <input type="email" name='email0' placeholder="E-mail" class="form-control"/>
+                                                </td> 
+                                                <td>
+                                                    <input type="text" name='telefone0' placeholder="Telefone" class="form-control"/>
+                                                </td> 
+                                                <td>
+                                                    <input type="text" name='ramal0' placeholder="Ramal" class="form-control"/>
+                                                </td>  
+                                            </tr>
+                                            <tr id='addr1'></tr>
+                                        </table>
+                                        <div class="form-group">
+                                            <div class="col-sm-4">
+                                                <div style="padding-top:5px;"></div>
+                                                <a id="add_row" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></a>
+                                                <a id='delete_row' class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
@@ -288,6 +310,9 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="tab-pane" id="tab_5">
+                            
+                        </div>
                     </div>
                 </div>
                 <!-- /.tab-pane -->
@@ -299,6 +324,7 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
 <script type="text/javascript">
 
     function valor(tipo) {
@@ -468,5 +494,23 @@
         autoclose: 1,
         language: "pt-BR",
         startDate: '+0d',
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var i = 1;
+        $("#add_row").click(function () {
+            $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='name" + i + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='setor" + i + "' type='text' placeholder='Setor'  class='form-control input-md'></td><td><input  name='email" + i + "' type='email' placeholder='E-mail'  class='form-control input-md'></td><td><input  name='telefone" + i + "' type='text' placeholder='Telefone'  class='form-control input-md'></td><td><input  name='ramal" + i + "' type='text' placeholder='Ramal'  class='form-control input-md'></td>");
+
+            $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+            i++;
+        });
+        $("#delete_row").click(function () {
+            if (i > 1) {
+                $("#addr" + (i - 1)).html('');
+                i--;
+            }
+        });
+
     });
 </script>
