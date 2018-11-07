@@ -308,7 +308,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Incluir Produto</a></li>
+                                <li><a href="/admin/produto"><i class="fa fa-circle-o"></i> Gerenciar Produto</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>

@@ -25,7 +25,7 @@
                         <li><a href="#tab_2" data-toggle="tab">Dados Contato</a></li>
                         <li><a href="#tab_3" data-toggle="tab">Dados Complementares</a></li>
                         <li><a href="#tab_4" data-toggle="tab">Observações</a></li>
-                        <li><a href="#tab_5" data-toggle="tab">Teste</a></li>
+                        <!-- <li><a href="#tab_5" data-toggle="tab">Teste</a></li> -->
                         <!--                        <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>-->
                     </ul>
                     <div class="tab-content">
@@ -83,7 +83,66 @@
                                             <label id="im" style="display:none;">Inscrição Municipal</label>
                                             <input type="text" name="im" class="form-control" placeholder="IM" style="display:none;">
                                         </div>
+                                        <div class="col-sm-3">
+                                            <label id="crt" style="display:none;">Código de regime tributário</label>
+                                            <input type="text" name="crt" class="form-control" placeholder="Código de regime tributário" style="display:none;">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label id="insc_suf" style="display:none;">Inscrição Suframa</label>
+                                            <input type="text" name="insc_suf" class="form-control" placeholder="Inscrição Suframa" style="display:none;">
+                                        </div>
                                     </div>
+                                    <div style="padding-top:20px;">
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <label id="crt" style="display:none;">Código de regime tributário</label>
+                                            <input type="text" name="crt" class="form-control" placeholder="Código de regime tributário" style="display:none;" value="">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label id="insc_suf" style="display:none;">Inscrição Suframa</label>
+                                            <input type="text" name="insc_suf" class="form-control" id="insc_suf" placeholder="Inscrição Suframa" style="display:none;" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label id="ec" style="display:none;">Estado civil</label>
+                                        <select id="ec" class="form-control" name="estadocivil" style="display:none;">
+                                            <option value="">Selecione...</option>
+                                            <option value="1">Casado</option>
+                                            <option value="2">Solteiro</option>
+                                            <option value="3">Viúvo</option>
+                                            <option value="4">Separado</option>
+                                            <option value="5">Desquitado</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label id="profissao" style="display:none;">Profissão</label>
+                                        <input type="text" name="profissao" class="form-control" id="profissao" placeholder="Profissão" style="display:none;" value="">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label id="sexo" style="display:none;">Sexo</label>
+                                        <select class="form-control" name="sexo" style="display:none;">
+                                            <option value="">Selecione...</option>
+                                            <option value="1">Feminino</option>
+                                            <option value="2">Masculino</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label id="dtnasc" style="display:none;">Data de Nascimento</label>
+                                        <div name="dtnasc" id="dtnasc" class="input-group date">
+                                            <input type="text" name="dtnasc" class="form-control" id="dtnasc" placeholder="dd/mm/aaaa" style="display:none;" value="">
+                                            <div name="dtnasc" id="dtnasc" style="display:none;" class= "input-group-addon">
+                                                <span name="dtnasc" id="dtnasc" class="glyphicon glyphicon-th"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label id="naturalidade" style="display:none;">Naturalidade</label>
+                                        <input type="text" name="naturalidade" class="form-control" id="naturalidade" placeholder="Naturalidade" style="display:none;" value="">
+                                    </div>
+                                </div>
 
                                     <span style="font-size:20px;">Endereço</span>
                                     <div class="table table-bordered table-hover"></div>

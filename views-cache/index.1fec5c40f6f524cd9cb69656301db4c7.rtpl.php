@@ -1,1 +1,5 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><h1>Bem Vindo!</h1>
+
+<div class="pull-right">
+    <a href="/admin/login" class="btn btn-default btn-flat">LOGIN</a>
+</div>

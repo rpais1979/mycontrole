@@ -22,6 +22,9 @@ require_once("controller/centrodecustos.php");
 require_once("controller/financeirocategorias.php");
 require_once("controller/financeirobancos.php");
 require_once("controller/cliente.php");
+require_once("controller/transportadoras.php");
+require_once("controller/fornecedores.php");
+require_once("controller/produtos.php");
 
 $app->run();
 

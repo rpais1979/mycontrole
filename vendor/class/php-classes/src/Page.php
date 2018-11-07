@@ -14,34 +14,39 @@ class Page {
 		"data"=>[]
 	];
 
-	public function __construct($opts = array(), $tpl_dir = "/views/")
-	{
+	    public function __construct($opts = array(), $tpl_dir = "/views/")
+    {
+     
+        $this->tpl_dir = $tpl_dir;
+     
+        $this->options = array_merge($this->defaults, $opts);
+     
+        $this->config = array(
+            "tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/views/",
+    	"cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
+    	"debug"         => false
+        );
+     
+        Tpl::configure( $this->config );
+     
+        $this->tpl = new Tpl;
+     
+        $this->setData($this->options['data']);
+     
+        if ($this->options["header"] === true) $this->tpl->draw("header");
+     
+    }
 
-		$this->options = array_merge($this->defaults, $opts);
-
-		$config = array(
-		    "base_url"      => null,
-		    "tpl_dir"       => $_SERVER['DOCUMENT_ROOT'].$tpl_dir,
-		    "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
-		    "debug"         => false
-		);
-
-		Tpl::configure( $config );
-
-		$this->tpl = new Tpl();
-
-		if ($this->options['data']) $this->setData($this->options['data']);
-
-		if ($this->options['header'] === true) $this->tpl->draw("header", false);
-
-	}
-
-	public function __destruct()
-	{
-
-		if ($this->options['footer'] === true) $this->tpl->draw("footer", false);
-
-	}
+	    public function __destruct()
+    {
+     
+        if (isset($this->tpl2)) {
+            Tpl::configure($this->config);
+        }
+     
+        if ($this->options["footer"] === true) $this->tpl->draw("footer");
+     
+    }
 
 	private function setData($data = array())
 	{
@@ -55,14 +60,30 @@ class Page {
 
 	}
 
-	public function setTpl($tplname, $data = array(), $returnHTML = false)
-	{
-
-		$this->setData($data);
-
-		return $this->tpl->draw($tplname, $returnHTML);
-
-	}
+	    public function setTpl($name, $data = array(), $returnHtml = false)
+    {
+     
+        if ($this->tpl_dir != '/views/') {
+     
+            $config2 = array(
+    	    "tpl_dir"       => $_SERVER['DOCUMENT_ROOT'].$this->tpl_dir,
+            "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
+    	    "debug"         => false
+    	);
+     
+    	Tpl::configure( $config2 );
+     
+    	$this->tpl2 = new Tpl;
+     
+        } else {
+    	$this->tpl2 = $this->tpl;
+        }
+     
+        $this->setData($data);
+     
+        return $this->tpl2->draw($name, $returnHtml);
+     
+    }
 
 }
 
