@@ -269,7 +269,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="/admin/users"><i class="fa fa-circle-o"></i> Usuários</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Funcionários</a></li>
+                                <li><a href="/admin/funcionario"><i class="fa fa-circle-o"></i> Funcionários</a></li>
                                 <li><a href="/admin/cliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
                                 <li><a href="/admin/fornecedor"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
                                 <li><a href="/admin/transportadora"><i class="fa fa-circle-o"></i> Transportadoras</a></li>
@@ -309,9 +309,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="/admin/produto"><i class="fa fa-circle-o"></i> Gerenciar Produto</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>
+                                <li><a href="/admin/estoque"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
+                                <li><a href="/admin/compras"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
+                                <li><a href="/admin/inventario"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>
                                 <!-- <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li> -->
                                 <li class="treeview">
@@ -323,21 +323,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/categories"><i class="fa fa-circle-o"></i> Categoria</a></li>
                                     </ul>
-                                    <!-- <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/gp-produto"><i class="fa fa-circle-o"></i> Grupo de Produto</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxxx</a></li>
+                                        <li><a href="/admin/un-produto"><i class="fa fa-circle-o"></i> Unidade de Produto</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/variacao"><i class="fa fa-circle-o"></i> Variação</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
                                     </ul>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
-                                    </ul>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
-                                    </ul> -->
                                 </li>
                             </ul>
                         </li>
@@ -350,9 +350,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Contas a Receber</a></li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
+                                <li><a href="/admin/contasapagar"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
+                                <li><a href="/admin/contasareceber"><i class="fa fa-circle-o"></i> Contas a Receber</a></li>
+                                <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
                                 <li class="treeview">
                                     <a href="#"><i class="fa fa-circle-o"></i> Opções Financeiras
                                         <span class="pull-right-container">
@@ -360,25 +360,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </span>
                                     </a>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Caixa</a></li>
+                                        <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i> Caixa</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/financeiro/formadepagamento"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
+                                        <li><a href="/admin/contabancaria"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/financeirobanco"><i class="fa fa-circle-o"></i> Bancos</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/financeiro/formadepagamento"><i class="fa fa-circle-o"></i> Forma de Pagamento</a></li>
+                                        <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Forma de Pagamento</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Plano de Conta</a></li>
+                                        <li><a href="/admin/planodeconta"><i class="fa fa-circle-o"></i> Plano de Conta</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/centrodecusto"><i class="fa fa-circle-o"></i> Centro de Custo</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Transferências</a></li>
+                                        <li><a href="/admin/transferencia"><i class="fa fa-circle-o"></i> Transferências</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/financeirocategoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
@@ -492,6 +492,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </ul>
                                 </li>
                             </ul>
+                            <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-money"></i> <span> Configurações</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/admin/contasapagar"><i class="fa fa-circle-o"></i> Gerais</a></li>
+                                <li><a href="/admin/contasareceber"><i class="fa fa-circle-o"></i> Usuários</a></li>
+                                <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i> Dados da Empresa</a></li>
+                                <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i> Meu Plano</a></li>
+                                <!-- <li class="treeview">
+                                    <a href="#"><i class="fa fa-circle-o"></i> Opções Financeiras
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i> Caixa</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/contabancaria"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/financeirobanco"><i class="fa fa-circle-o"></i> Bancos</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Forma de Pagamento</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/planodeconta"><i class="fa fa-circle-o"></i> Plano de Conta</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/centrodecusto"><i class="fa fa-circle-o"></i> Centro de Custo</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/transferencia"><i class="fa fa-circle-o"></i> Transferências</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/financeirocategoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
                             <li><a href="/admin/logout"><i class="glyphicon glyphicon-log-out"></i> Sair do Sistema</a></li>
                         </li>
 

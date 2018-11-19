@@ -12,7 +12,7 @@ $app->get('/admin/tipodecliente', function() {
 
 	$tipodecliente = TipodeCliente::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl('tipodecliente', array('tipodecliente'=>$tipodecliente));
 
@@ -22,7 +22,7 @@ $app->get("/admin/tipodecliente/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl("tipodecliente-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/tipodecliente/novo", function(){
 $app->post("/admin/tipodecliente/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodecliente = new TipodeCliente();
 
@@ -47,6 +49,8 @@ $app->get("/admin/tipodecliente/:idtipodecliente/delete", function($idtipodeclie
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodecliente = new TipodeCliente();
 
 	$tipodecliente->get((int)$idtipodecliente);
@@ -61,6 +65,8 @@ $app->get("/admin/tipodecliente/:idtipodecliente", function($idtipodecliente){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodecliente = new TipodeCliente();
 
 	$tipodecliente->get((int)$idtipodecliente);	
@@ -74,6 +80,8 @@ $app->get("/admin/tipodecliente/:idtipodecliente", function($idtipodecliente){
 $app->post("/admin/tipodecliente/:idtipodecliente", function($idtipodecliente){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodecliente = new TipodeCliente();
 

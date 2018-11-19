@@ -12,7 +12,7 @@ $app->get('/admin/cliente', function() {
 
 	$cliente = clientes::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/cliente/');
 
 	$page->setTpl('cliente', array('cliente'=>$cliente));
 
@@ -22,7 +22,7 @@ $app->get("/admin/cliente/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/cliente/');
 
 	$page->setTpl("cliente-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/cliente/novo", function(){
 $app->post("/admin/cliente/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/cliente/');
 
 	$cliente = new clientes();
 
@@ -47,6 +49,8 @@ $app->get("/admin/cliente/:idcliente/delete", function($idcliente){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/cliente/');
+
 	$cliente = new clientes();
 
 	$cliente->get((int)$idcliente);
@@ -61,6 +65,8 @@ $app->get("/admin/cliente/:idcliente", function($idcliente){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/cliente/');
+
 	$cliente = new clientes();
 
 	$cliente->get((int)$idcliente);	
@@ -74,6 +80,8 @@ $app->get("/admin/cliente/:idcliente", function($idcliente){
 $app->post("/admin/cliente/:idcliente", function($idcliente){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/cliente/');
 
 	$cliente = new clientes();
 

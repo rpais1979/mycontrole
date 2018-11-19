@@ -12,7 +12,7 @@ $app->get('/admin/tipodeendereco', function() {
 
 	$tipodeendereco = TipodeEndereco::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl('tipodeendereco', array('tipodeendereco'=>$tipodeendereco));
 
@@ -22,8 +22,8 @@ $app->get("/admin/tipodeendereco/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
-
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+	
 	$page->setTpl("tipodeendereco-novo");
 
 });
@@ -31,6 +31,8 @@ $app->get("/admin/tipodeendereco/novo", function(){
 $app->post("/admin/tipodeendereco/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodeendereco = new TipodeEndereco();
 
@@ -47,6 +49,8 @@ $app->get("/admin/tipodeendereco/:idtipodeendereco/delete", function($idtipodeen
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodeendereco = new TipodeEndereco();
 
 	$tipodeendereco->get((int)$idtipodeendereco);
@@ -61,6 +65,8 @@ $app->get("/admin/tipodeendereco/:idtipodeendereco", function($idtipodeendereco)
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodeendereco = new TipodeEndereco();
 
 	$tipodeendereco->get((int)$idtipodeendereco);	
@@ -74,6 +80,8 @@ $app->get("/admin/tipodeendereco/:idtipodeendereco", function($idtipodeendereco)
 $app->post("/admin/tipodeendereco/:idtipodeendereco", function($idtipodeendereco){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodeendereco = new TipodeEndereco();
 

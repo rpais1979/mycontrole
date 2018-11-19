@@ -9,7 +9,7 @@ $app->get('/admin/users', function() {
 
 	$users = User::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/usuario/');
 
 	$page->setTpl('users', array('users'=>$users));
 
@@ -19,7 +19,7 @@ $app->get("/admin/users/create", function(){
 
 	User::verifyLogin();
 	
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/usuario/');
 
 	$page->setTpl("users-create");
 });
@@ -27,6 +27,8 @@ $app->get("/admin/users/create", function(){
 $app->get("/admin/users/:iduser/delete",function($iduser){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/usuario/');
 
 	$user = new User();
 
@@ -43,6 +45,8 @@ $app->get("/admin/users/:iduser",function($iduser){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/usuario/');
+
 	$user = new User();
 
 	$user->get((int)$iduser);
@@ -58,6 +62,8 @@ $app->get("/admin/users/:iduser",function($iduser){
 $app->post("/admin/users/create", function() {
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/usuario/');
 
 	$user = new User();
 
@@ -80,6 +86,8 @@ $app->post("/admin/users/create", function() {
 $app->post("/admin/users/:iduser",function($iduser){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/usuario/');
 
 	$user = new User();
 

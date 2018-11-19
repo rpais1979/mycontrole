@@ -12,7 +12,7 @@ $app->get('/admin/produto', function() {
 
 	$produto = Produto::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/produto/');
 
 	$page->setTpl('produto', array('produto'=>$produto));
 
@@ -22,7 +22,7 @@ $app->get("/admin/produto/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/produto/');
 
 	$page->setTpl("produto-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/produto/novo", function(){
 $app->post("/admin/produto/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/produto/');
 
 	$produto = new Produto();
 
@@ -47,6 +49,8 @@ $app->get("/admin/produto/:idproduto/delete", function($idproduto){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/produto/');
+
 	$produto = new Produto();
 
 	$produto->get((int)$idproduto);
@@ -61,6 +65,8 @@ $app->get("/admin/produto/:idproduto", function($idproduto){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/produto/');
+
 	$produto = new Produto();
 
 	$produto->get((int)$idproduto);	
@@ -74,6 +80,8 @@ $app->get("/admin/produto/:idproduto", function($idproduto){
 $app->post("/admin/produto/:idproduto", function($idproduto){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/produto/');
 
 	$produto = new Produto();
 

@@ -14,27 +14,46 @@ class Page {
 		"data"=>[]
 	];
 
-	    public function __construct($opts = array(), $tpl_dir = "/views/")
+	        public function __construct($opts = array(), $tpl_dir = "/views/", $inadmin = 0)
     {
-     
+         
         $this->tpl_dir = $tpl_dir;
-     
+         
         $this->options = array_merge($this->defaults, $opts);
      
+        switch ($tpl_dir) {
+            case '/views/':
+            case '/views/admin/':
+                    
+                break;
+                
+            default:
+                switch ($inadmin) {
+                    case 0:
+                        $tpl_dir = "/views/";
+                        break;
+                        
+                    default:
+                        $tpl_dir = "/views/admin/";
+                        break;
+                }
+                break;
+        }
+         
         $this->config = array(
-        "tpl_dir"       => $_SERVER['DOCUMENT_ROOT'].$tpl_dir,
-    	"cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
-    	"debug"         => false
+            "tpl_dir"       => $_SERVER['DOCUMENT_ROOT'].$tpl_dir,
+            "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
+            "debug"         => false
         );
-     
+         
         Tpl::configure( $this->config );
-     
+         
         $this->tpl = new Tpl;
-     
+         
         $this->setData($this->options['data']);
-     
+         
         if ($this->options["header"] === true) $this->tpl->draw("header");
-     
+         
     }
 
 	    public function __destruct()
@@ -82,7 +101,7 @@ class Page {
         $this->setData($data);
      
         return $this->tpl2->draw($name, $returnHtml);
-     
+             
     }
 
 }

@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -33,17 +33,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {loop="$formadepagamento"}
+                  <?php $counter1=-1;  if( isset($formadepagamento) && ( is_array($formadepagamento) || $formadepagamento instanceof Traversable ) && sizeof($formadepagamento) ) foreach( $formadepagamento as $key1 => $value1 ){ $counter1++; ?>
+
                   <tr>
-                    <td>{$value.idcategory}</td>
-                    <td>{$value.descategory}</td>
-                    <td>{$value.descategory}</td>
+                    <td><?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
-                      <a href="/admin/formadepagamento/{$value.idcategory}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/formadepagamento/{$value.idcategory}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/formadepagamento/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/formadepagamento/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
-                  {/loop}
+                  <?php } ?>
+
                 </tbody>
               </table>
             </div>

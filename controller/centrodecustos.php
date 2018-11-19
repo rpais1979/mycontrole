@@ -12,7 +12,7 @@ $app->get('/admin/centrodecusto', function() {
 
 	$centrodecusto = CentrodeCusto::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$page->setTpl('centrodecusto', array('centrodecusto'=>$centrodecusto));
 
@@ -22,7 +22,7 @@ $app->get("/admin/centrodecusto/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$page->setTpl("centrodecusto-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/centrodecusto/novo", function(){
 $app->post("/admin/centrodecusto/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$centrodecusto = new CentrodeCusto();
 
@@ -47,6 +49,8 @@ $app->get("/admin/centrodecusto/:idcentrodecusto/delete", function($idcentrodecu
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/financeiro/');
+
 	$centrodecusto = new CentrodeCusto();
 
 	$centrodecusto->get((int)$idcentrodecusto);
@@ -61,6 +65,8 @@ $app->get("/admin/centrodecusto/:idcentrodecusto", function($idcentrodecusto){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/financeiro/');
+
 	$centrodecusto = new CentrodeCusto();
 
 	$centrodecusto->get((int)$idcentrodecusto);	
@@ -74,6 +80,8 @@ $app->get("/admin/centrodecusto/:idcentrodecusto", function($idcentrodecusto){
 $app->post("/admin/centrodecusto/:idcentrodecusto", function($idcentrodecusto){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$centrodecusto = new CentrodeCusto();
 

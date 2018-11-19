@@ -12,7 +12,7 @@ $app->get('/admin/transportadora', function() {
 
 	$transportadora = Transportadora::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/transportadora/');
 
 	$page->setTpl('transportadora', array('transportadora'=>$transportadora));
 
@@ -22,7 +22,7 @@ $app->get("/admin/transportadora/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/transportadora/');
 
 	$page->setTpl("transportadora-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/transportadora/novo", function(){
 $app->post("/admin/transportadora/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/transportadora/');
 
 	$transportadora = new Transportadora();
 
@@ -47,6 +49,8 @@ $app->get("/admin/transportadora/:idtransportadora/delete", function($idtranspor
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/transportadora/');
+
 	$transportadora = new Transportadora();
 
 	$transportadora->get((int)$idtransportadora);
@@ -61,6 +65,8 @@ $app->get("/admin/transportadora/:idtransportadora", function($idtransportadora)
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/transportadora/');
+
 	$transportadora = new Transportadora();
 
 	$transportadora->get((int)$idtransportadora);	
@@ -74,6 +80,8 @@ $app->get("/admin/transportadora/:idtransportadora", function($idtransportadora)
 $app->post("/admin/transportadora/:idtransportadora", function($idtransportadora){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/transportadora/');
 
 	$transportadora = new Transportadora();
 

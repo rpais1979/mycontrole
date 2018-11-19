@@ -6,31 +6,33 @@ use \Mycontrole\Model\FormadePagamento;
 
 // TIPOS DE CONTATO
 
-$app->get('/admin/financeiro/formadepagamento', function() {
+$app->get('/admin/formadepagamento', function() {
 
 	User::verifyLogin();
 
 	$formadepagamento = FormadePagamento::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$page->setTpl('formadepagamento', array('formadepagamento'=>$formadepagamento));
 
 });
 
-$app->get("/admin/financeiro/formadepagamento/novo", function(){
+$app->get("/admin/formadepagamento/novo", function(){
 
 	User::verifyLogin();
-	
-	$page = new Mycontrole\PageAdmin();
 
+	$page = new PageAdmin([], '/views/admin/financeiro/');
+	
 	$page->setTpl("formadepagamento-novo");
 
 });
 
-$app->post("/admin/financeiro/formadepagamento/novo", function(){
+$app->post("/admin/formadepagamento/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$formadepagamento = new FormadePagamento();
 
@@ -43,9 +45,11 @@ $app->post("/admin/financeiro/formadepagamento/novo", function(){
 
 });
 
-$app->get("/admin/financeiro/formadepagamento/:idformadepagamento/delete", function($idformadepagamento){
+$app->get("/admin/formadepagamento/:idformadepagamento/delete", function($idformadepagamento){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$formadepagamento = new FormadePagamento();
 
@@ -57,9 +61,11 @@ $app->get("/admin/financeiro/formadepagamento/:idformadepagamento/delete", funct
 	exit;
 });
 
-$app->get("/admin/financeiro/formadepagamento/:idformadepagamento", function($idformadepagamento){
+$app->get("/admin/formadepagamento/:idformadepagamento", function($idformadepagamento){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$formadepagamento = new FormadePagamento();
 
@@ -71,9 +77,11 @@ $app->get("/admin/financeiro/formadepagamento/:idformadepagamento", function($id
 	));
 });
 
-$app->post("/admin/financeiro/formadepagamento/:idformadepagamento", function($idformadepagamento){
+$app->post("/admin/formadepagamento/:idformadepagamento", function($idformadepagamento){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$formadepagamento = new FormadePagamento();
 

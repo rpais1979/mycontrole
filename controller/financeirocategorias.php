@@ -12,7 +12,7 @@ $app->get('/admin/financeirocategoria', function() {
 
 	$financeirocategoria = FinanceiroCategoria::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$page->setTpl('financeirocategoria', array('financeirocategoria'=>$financeirocategoria));
 
@@ -22,7 +22,7 @@ $app->get("/admin/financeirocategoria/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$page->setTpl("financeirocategoria-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/financeirocategoria/novo", function(){
 $app->post("/admin/financeirocategoria/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$financeirocategoria = new FinanceiroCategoria();
 
@@ -47,6 +49,8 @@ $app->get("/admin/financeirocategoria/:idfinanceirocategoria/delete", function($
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/financeiro/');
+
 	$financeirocategoria = new FinanceiroCategoria();
 
 	$financeirocategoria->get((int)$idfinanceirocategoria);
@@ -61,6 +65,8 @@ $app->get("/admin/financeirocategoria/:idfinanceirocategoria", function($idfinan
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/financeiro/');
+
 	$financeirocategoria = new FinanceiroCategoria();
 
 	$financeirocategoria->get((int)$idfinanceirocategoria);	
@@ -74,6 +80,8 @@ $app->get("/admin/financeirocategoria/:idfinanceirocategoria", function($idfinan
 $app->post("/admin/financeirocategoria/:idfinanceirocategoria", function($idfinanceirocategoria){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/financeiro/');
 
 	$financeirocategoria = new FinanceiroCategoria();
 

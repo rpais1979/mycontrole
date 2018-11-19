@@ -12,7 +12,7 @@ $app->get('/admin/tipodecontato', function() {
 
 	$tipodecontato = TipodeContato::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl('tipodecontato', array('tipodecontato'=>$tipodecontato));
 
@@ -22,7 +22,7 @@ $app->get("/admin/tipodecontato/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl("tipodecontato-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/tipodecontato/novo", function(){
 $app->post("/admin/tipodecontato/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodecontato = new TipodeContato();
 
@@ -47,6 +49,8 @@ $app->get("/admin/tipodecontato/:idtipodecontato/delete", function($idtipodecont
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodecontato = new TipodeContato();
 
 	$tipodecontato->get((int)$idtipodecontato);
@@ -61,6 +65,8 @@ $app->get("/admin/tipodecontato/:idtipodecontato", function($idtipodecontato){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$tipodecontato = new TipodeContato();
 
 	$tipodecontato->get((int)$idtipodecontato);	
@@ -74,6 +80,8 @@ $app->get("/admin/tipodecontato/:idtipodecontato", function($idtipodecontato){
 $app->post("/admin/tipodecontato/:idtipodecontato", function($idtipodecontato){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$tipodecontato = new TipodeContato();
 

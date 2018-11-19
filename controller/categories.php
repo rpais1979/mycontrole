@@ -12,7 +12,7 @@ $app->get('/admin/categories', function() {
 
 	$categories = Category::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl('categories', array('categories'=>$categories));
 
@@ -22,7 +22,7 @@ $app->get("/admin/categories/create", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl("categories-create");
 
@@ -31,6 +31,8 @@ $app->get("/admin/categories/create", function(){
 $app->post("/admin/categories/create", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$categories = new Category();
 
@@ -47,6 +49,8 @@ $app->get("/admin/categories/:idcategory/delete", function($idcategory){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$categories = new Category();
 
 	$categories->get((int)$idcategory);
@@ -61,6 +65,8 @@ $app->get("/admin/categories/:idcategory", function($idcategory){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$categories = new Category();
 
 	$categories->get((int)$idcategory);	
@@ -74,6 +80,8 @@ $app->get("/admin/categories/:idcategory", function($idcategory){
 $app->post("/admin/categories/:idcategory", function($idcategory){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$categories = new Category();
 

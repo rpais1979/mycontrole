@@ -12,7 +12,7 @@ $app->get('/admin/contacttype', function() {
 
 	$contacttypes = ContactType::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl('contacttype', array('contacttypes'=>$contacttypes));
 
@@ -22,7 +22,7 @@ $app->get("/admin/contacttype/create", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$page->setTpl("contacttype-create");
 
@@ -31,6 +31,8 @@ $app->get("/admin/contacttype/create", function(){
 $app->post("/admin/contacttype/create", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$contacttypes = new ContactType();
 
@@ -47,6 +49,8 @@ $app->get("/admin/contacttype/:idcontacttype/delete", function($idcontacttype){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$contacttype = new ContactType();
 
 	$contacttype->get((int)$idcontacttype);
@@ -61,6 +65,8 @@ $app->get("/admin/contacttype/:idcontacttype", function($idcontacttype){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/configuracao/');
+
 	$contacttypes = new ContactType();
 
 	$contacttypes->get((int)$idcontacttype);	
@@ -74,6 +80,8 @@ $app->get("/admin/contacttype/:idcontacttype", function($idcontacttype){
 $app->post("/admin/contacttype/:idcontacttype", function($idcontacttype){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/configuracao/');
 
 	$contacttypes = new ContactType();
 

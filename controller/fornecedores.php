@@ -12,7 +12,7 @@ $app->get('/admin/fornecedor', function() {
 
 	$fornecedor = Fornecedor::listAll();
 
-	$page = new PageAdmin();
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
 
 	$page->setTpl('fornecedor', array('fornecedor'=>$fornecedor));
 
@@ -22,7 +22,7 @@ $app->get("/admin/fornecedor/novo", function(){
 
 	User::verifyLogin();
 	
-	$page = new Mycontrole\PageAdmin();
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
 
 	$page->setTpl("fornecedor-novo");
 
@@ -31,6 +31,8 @@ $app->get("/admin/fornecedor/novo", function(){
 $app->post("/admin/fornecedor/novo", function(){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
 
 	$fornecedor = new Fornecedor();
 
@@ -47,6 +49,8 @@ $app->get("/admin/fornecedor/:idfornecedor/delete", function($idfornecedor){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
+
 	$fornecedor = new Fornecedor();
 
 	$fornecedor->get((int)$idfornecedor);
@@ -61,6 +65,8 @@ $app->get("/admin/fornecedor/:idfornecedor", function($idfornecedor){
 
 	User::verifyLogin();
 
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
+
 	$fornecedor = new Fornecedor();
 
 	$fornecedor->get((int)$idfornecedor);	
@@ -74,6 +80,8 @@ $app->get("/admin/fornecedor/:idfornecedor", function($idfornecedor){
 $app->post("/admin/fornecedor/:idfornecedor", function($idfornecedor){
 
 	User::verifyLogin();
+
+	$page = new PageAdmin([], '/views/admin/fornecedor/');
 
 	$fornecedor = new Fornecedor();
 
