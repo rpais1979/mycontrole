@@ -19,7 +19,7 @@
         <div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/fornecedor/novo" class="btn btn-success">Cadastrar Fornecedores </a>
+              <a href="/admin/fornecedor/novo" class="btn btn-success">INCLUIR FORNECEDORES</a>
             </div>
 
             <div class="box-body no-padding">

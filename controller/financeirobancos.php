@@ -2,96 +2,96 @@
 
 use \Mycontrole\PageAdmin;
 use \Mycontrole\Model\User;
-use \Mycontrole\Model\FinanceiroCategoria;
+use \Mycontrole\Model\FinanceiroBancos;
 
 // TIPOS DE CONTATO
 
-$app->get('/admin/financeirocategoria', function() {
+$app->get('/admin/financeirobanco', function() {
 
 	User::verifyLogin();
 
-	$financeirocategoria = FinanceiroCategoria::listAll();
+	$financeirobanco = FinanceiroBancos::listAll();
 
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$page->setTpl('financeirocategoria', array('financeirocategoria'=>$financeirocategoria));
+	$page->setTpl('financeirobanco', array('financeirobanco'=>$financeirobanco));
 
 });
 
-$app->get("/admin/financeirocategoria/novo", function(){
+$app->get("/admin/financeirobanco/novo", function(){
 
 	User::verifyLogin();
 	
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$page->setTpl("financeirocategoria-novo");
+	$page->setTpl("financeirobanco-novo");
 
 });
 
-$app->post("/admin/financeirocategoria/novo", function(){
+$app->post("/admin/financeirobanco/novo", function(){
 
 	User::verifyLogin();
 
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$financeirocategoria = new FinanceiroCategoria();
+	$financeirobanco = new FinanceiroBancos();
 
-	$financeirocategoria->setData($_POST);
+	$financeirobanco->setData($_POST);
 
-	$financeirocategoria->save();
+	$financeirobanco->save();
 
-	header("Location: /admin/financeirocategoria");
+	header("Location: /admin/financeirobanco");
 	exit;	
 
 });
 
-$app->get("/admin/financeirocategoria/:idfinanceirocategoria/delete", function($idfinanceirocategoria){
+$app->get("/admin/financeirobanco/:idfinanceirobanco/delete", function($idfinanceirobanco){
 
 	User::verifyLogin();
 
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$financeirocategoria = new FinanceiroCategoria();
+	$financeirobanco = new FinanceiroBancos();
 
-	$financeirocategoria->get((int)$idfinanceirocategoria);
+	$financeirobanco->get((int)$idfinanceirobanco);
 
-	$financeirocategoria->delete();
+	$financeirobanco->delete();
 
-	header("Location: /admin/financeirocategoria");
+	header("Location: /admin/financeirobanco");
 	exit;
 });
 
-$app->get("/admin/financeirocategoria/:idfinanceirocategoria", function($idfinanceirocategoria){
+$app->get("/admin/financeirobanco/:idfinanceirobanco", function($idfinanceirobanco){
 
 	User::verifyLogin();
 
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$financeirocategoria = new FinanceiroCategoria();
+	$financeirobanco = new FinanceiroBancos();
 
-	$financeirocategoria->get((int)$idfinanceirocategoria);	
+	$financeirobanco->get((int)$idfinanceirobanco);	
 
 	$page = new Mycontrole\PageAdmin();
 
-	$page->setTpl("financeirocategoria-editar", array("financeirocategoria"=>$financeirocategoria->getValues()
+	$page->setTpl("financeirobanco-editar", array("financeirobanco"=>$financeirobanco->getValues()
 	));
 });
 
-$app->post("/admin/financeirocategoria/:idfinanceirocategoria", function($idfinanceirocategoria){
+$app->post("/admin/financeirobanco/:idfinanceirobanco", function($idfinanceirobanco){
 
 	User::verifyLogin();
 
 	$page = new PageAdmin([], '/views/admin/financeiro/');
 
-	$financeirocategoria = new FinanceiroCategoria();
+	$financeirobanco = new FinanceiroBancos();
 
-	$financeirocategoria->get((int)$idfinanceirocategoria);
+	$financeirobanco->get((int)$idfinanceirobanco);
 
-	$financeirocategoria->setData($_POST);
+	$financeirobanco->setData($_POST);
 
-	$financeirocategoria->save();
+	$financeirobanco->save();
 
-	header("Location: /admin/financeirocategoria");
+	header("Location: /admin/financeirobanco");
 	exit;	
 	
 });

@@ -19,7 +19,7 @@
   		<div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/centrodecusto/novo" class="btn btn-success">Cadastrar</a>
+              <a href="/admin/centrodecusto/novo" class="btn btn-success">INCLUIR CENTRO DE CUSTO</a>
             </div>
 
             <div class="box-body no-padding">

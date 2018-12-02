@@ -3,11 +3,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Lista de clientes
+    Lista de Clientes
   </h1>
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active"><a href="/admin/cliente">clientes</a></li>
+    <li class="active"><a href="/admin/cliente">Clientes</a></li>
   </ol>
 </section>
 
@@ -19,7 +19,7 @@
         <div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/cliente/novo" class="btn btn-success">Cadastrar clientes </a>
+              <a href="/admin/cliente/novo" class="btn btn-success">INCLUIR CLIENTE</a>
             </div>
 
             <div class="box-body no-padding">

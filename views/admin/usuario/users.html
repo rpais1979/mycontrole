@@ -6,7 +6,7 @@
     Usuários
   </h1>
   <ol class="breadcrumb">
-    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin"><i class="fa fa-dashboard"></i>Home</a></li>
     <li class="active"><a href="/admin/users">Usuários</a></li>
   </ol>
 </section>
@@ -19,7 +19,7 @@
   		<div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/users/create" class="btn btn-success">Cadastrar Usuários</a>
+              <a href="/admin/users/create" class="btn btn-success">INCLUIR USUÁRIOS</a>
             </div>
 
             <div class="box-body no-padding">

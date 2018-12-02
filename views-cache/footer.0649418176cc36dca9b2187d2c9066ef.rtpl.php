@@ -95,6 +95,8 @@
 <script src="/vendor/res/admin/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/vendor/res/admin/dist/js/app.min.js"></script>
+<script src="/vendor/res/admin/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="/vendor/res/admin/plugins/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

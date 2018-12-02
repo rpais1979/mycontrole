@@ -6,7 +6,7 @@
     Lista de Transportadoras
   </h1>
   <ol class="breadcrumb">
-    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin"><i class="fa fa-dashboard"></i>Home</a></li>
     <li class="active"><a href="/admin/transportadora">Transportadoras</a></li>
   </ol>
 </section>
@@ -19,7 +19,7 @@
         <div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/transportadora/novo" class="btn btn-success">Cadastrar Transportadora </a>
+              <a href="/admin/transportadora/novo" class="btn btn-success">INCLUIR TRANSPORTADORA</a>
             </div>
 
             <div class="box-body no-padding">

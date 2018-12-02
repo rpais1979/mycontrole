@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MYCONTROLE</title>
+        <title>MY CONTROLE</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
@@ -18,12 +18,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="/vendor/res/admin/dist/css/AdminLTE.min.css">
+
         <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
               page. However, you can choose any other skin. Make sure you
               apply the skin class to the body tag so the changes take effect.
         -->
         <link rel="stylesheet" href="/vendor/res/admin/dist/css/skins/skin-blue.min.css">
+        <!-- bootstrap datepicker -->
+        <link rel="stylesheet" href="/vendor/res/admin/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min">
         <script src="/vendor/res/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- <link rel="stylesheet" href="/vendor/res/admin/plugins/bootstrap-datepicker.js"> -->
+        <!-- <script src="stylesheet" href="/vendor/res/admin/plugins/bootstrap-datepicker.js"></script> -->
         <!------ Include the above in your HEAD tag ---------->
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -344,6 +349,56 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <li class="treeview">
                             <a href="#">
+                                <i class="fa fa-money"></i> <span> Vendas</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/admin/vendas"><i class="fa fa-circle-o"></i> Pedidos de Venda</a></li>
+                                <li><a href="/admin/simuladordefrete"><i class="fa fa-circle-o"></i> Simulador de Frete</a></li>
+                                <li class="treeview">
+                                    <a href="#"><i class="fa fa-circle-o"></i> Configuração
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i>Status de Vendas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-money"></i> <span> P.C.P</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/admin/contasapagar"><i class="fa fa-circle-o"></i> Ordem de Produção</a></li>
+                                <li><a href="/admin/contasareceber"><i class="fa fa-circle-o"></i>Status</a></li>
+                                <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i>Previsão de Produção</a></li>
+                                <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i>Consumo de Material</a></li>
+                                <li class="treeview">
+                                    <a href="#"><i class="fa fa-circle-o"></i> Configuração
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i>Equipamento</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/contabancaria"><i class="fa fa-circle-o"></i>Prazos</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
                                 <i class="fa fa-money"></i> <span> Financeiro</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
@@ -352,6 +407,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <ul class="treeview-menu">
                                 <li><a href="/admin/contasapagar"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
                                 <li><a href="/admin/contasareceber"><i class="fa fa-circle-o"></i> Contas a Receber</a></li>
+                                <li><a href="/admin/transferencia"><i class="fa fa-circle-o"></i> Transferência</a></li>
                                 <li><a href="/admin/fluxodecaixa"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
                                 <li class="treeview">
                                     <a href="#"><i class="fa fa-circle-o"></i> Opções Financeiras
@@ -363,10 +419,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i> Caixa</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/contabancaria"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
+                                        <li><a href="/admin/financeirocontabancaria"><i class="fa fa-circle-o"></i> Contas Bancárias</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/financeirobanco"><i class="fa fa-circle-o"></i> Bancos</a></li>
+                                        <li><a href="/admin/contafinanceira"><i class="fa fa-circle-o"></i> Contas Financeiras</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/formadepagamento"><i class="fa fa-circle-o"></i> Forma de Pagamento</a></li>
@@ -376,9 +432,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/centrodecusto"><i class="fa fa-circle-o"></i> Centro de Custo</a></li>
-                                    </ul>
-                                    <ul class="treeview-menu">
-                                        <li><a href="/admin/transferencia"><i class="fa fa-circle-o"></i> Transferências</a></li>
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/financeirocategoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
