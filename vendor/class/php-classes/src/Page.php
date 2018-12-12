@@ -3,6 +3,7 @@
 namespace Mycontrole;
 
 use Rain\Tpl;
+use \Mycontrole\Model\User;
 
 class Page {
 
@@ -49,6 +50,8 @@ class Page {
         Tpl::configure( $this->config );
          
         $this->tpl = new Tpl;
+       
+       if (isset($_SESSION[User::SESSION])) $this->tpl->assign("user", $_SESSION[User::SESSION]);
          
         $this->setData($this->options['data']);
          
@@ -67,17 +70,12 @@ class Page {
      
     }
 
-	private function setData($data = array())
-	{
-
-		foreach($data as $key => $val)
-		{
-
-			$this->tpl->assign($key, $val);
-
-		}
-
-	}
+	    private function setData($data = array())
+    {
+         foreach ($data as $key => $value) {
+         $this->tpl->assign($key, $value);
+         }
+     }
 
 	    public function setTpl($name, $data = array(), $returnHtml = false)
     {

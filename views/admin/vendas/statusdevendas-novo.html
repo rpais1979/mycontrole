@@ -1,33 +1,29 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
+Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Forma de Pagamento
+            Centro de Custo
         </h1>
         <ol class="breadcrumb">
             <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="/admin/formadepagamento">Forma de Pagamento</a></li>
-            <li class="active"><a href="/admin/formadepagamento/novo">Cadastrar</a></li>
+            <li><a href="/admin/centrodecusto">Centro de Custo</a></li>
+            <li class="active"><a href="/admin/centrodecusto/novo">Cadastrar</a></li>
         </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-success">
-                    <!--         <div class="box-header with-border">
-                              <h3 class="box-title">Novo Tipo de Cliente</h3>
-                            </div> -->
-                    <!-- /.box-header -->
-                    <!-- form start -->
-                    <form role="form" action="/admin/formadepagamento/novo" method="post">
+                    <form role="form" action="/admin/centrodecusto/novo" method="post">
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="descategory">Nome da Forma de Pagamento</label>
-                                <input type="text" class="form-control" id="descategory" name="descategory" placeholder="Digite o nome da forma de pagamento">
+                                <div class="col-sm-12">
+                                    <label for="descategory">Nome do Centro de Custo</label>
+                                    <input type="text" class="form-control" id="descategory" name="descategory" placeholder="Digite o nome do Centro de Custo">
+                                </div>
                             </div>
                         </div>
                         <!-- /.box-body -->
@@ -41,4 +37,4 @@
     </section>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /.content-wrapper

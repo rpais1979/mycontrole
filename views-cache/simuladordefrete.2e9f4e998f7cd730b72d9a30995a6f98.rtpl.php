@@ -23,6 +23,7 @@
                                                         <span style="font-size: 15px;"> - Informe o CEP e as dimensões estimadas do pacote para estimar o frete</span>-->
                             <div style="padding-top:10px;"></div>
                             <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                                
                                 <div class="form-group">
                                     <div class="col-xs-2">
                                         <label for="sCepDestino">CEP DESTINO</label>
@@ -32,8 +33,6 @@
                                         <label for="nVlValorDeclarado">Valor (R$):</label>
                                         <input type="text" name="nVlValorDeclarado" required="" class="form-control" id="nVlValorDeclarado" aria-describedby="emailHelp" placeholder="0.00" value="">
                                     </div>
-                                </div>
-                                <div class="form-group">
                                     <div class="col-xs-2">
                                         <label for="nVlLargura">Largura</label>
                                         <input type="text" name="nVlLargura" class="form-control" id="nVlLargura" aria-describedby="emailHelp" min="11" max="105" maxlength="3" required="" value="">
@@ -49,15 +48,12 @@
                                         <input type="text" name="nVlComprimento" min="16" max="105" maxlength="3" required="" class="form-control" id="nVlComprimento" aria-describedby="emailHelp" value="">
                                         <small id="emailHelp" class="form-text text-muted">Mín 2cm/Máx 105cm</small>
                                     </div>
-                                </div>
-                                <div class="form-group">
                                     <div class="col-xs-2">
                                         <label for="sCepDestino">Peso</label>
                                         <input type="text" name="sCepDestino" class="form-control" id="sCepDestino" aria-describedby="emailHelp" required="" maxlength="9" value="">
                                         <small id="emailHelp" class="form-text text-muted">Peso Total pacote + produto</small>
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <div class="col-xs-2">
                                         <input type="submit" class="btn btn-success" value="Simular Frete" name="SendCadCatDepRec">

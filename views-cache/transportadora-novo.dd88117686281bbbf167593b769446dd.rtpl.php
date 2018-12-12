@@ -86,10 +86,6 @@
                                                 </div>
                                                 <!-- /.input group -->
                                             </div>
-                                            <!-- /.input group -->
-
-                                            <!-- <label id="dtnascimento" style="display:none;">Data de Nascimento</label>
-                                            <input type="text" name="dtnascimento" id="dtnascimento" class="form-control" placeholder="Data de Nascimento" style="display:none;"> -->
                                         </div>
                                         <div class="col-xs-3">
                                             <label id="descontribuinte" style="display:none;">Tipo de Contribuinte</label>

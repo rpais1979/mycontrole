@@ -183,17 +183,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <!-- Menu Toggle Button -->
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- The user image in the navbar-->
-                                    <img src="vendor/res/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                    <img src="/views/admin/usuario/img/{$user.iduser}/160x160.jpg" class="user-image" alt="User Image">
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                    <span class="hidden-xs">Rodrigo Pais</span>
+                                    <span class="hidden-xs">{$user.desperson}</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
                                     <li class="user-header">
-                                        <img src="vendor/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                        <img src="/views/admin/usuario/img/{$user.iduser}/160x160.jpg" class="img-circle" alt="User Image">
 
                                         <p>
-                                            Rodrigo Pais
+                                            {$user.desperson}
                                             <small>Member since Nov. 2012</small>
                                         </p>
                                     </li>
@@ -240,10 +240,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Sidebar user panel (optional) -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="vendor/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="/views/admin/usuario/img/{$user.iduser}/160x160.jpg" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Rodrio Pais</p>
+                            <p>{$user.desperson}</p>
                             <!-- Status -->
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -364,7 +364,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </span>
                                     </a>
                                     <ul class="treeview-menu">
-                                        <li><a href="/admin/caixa"><i class="fa fa-circle-o"></i>Status de Vendas</a></li>
+                                        <li><a href="/admin/statusdevendas"><i class="fa fa-circle-o"></i>Status de Vendas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-money"></i> <span> Marketplace</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <!-- <li><a href="/admin/vendas"><i class="fa fa-circle-o"></i> Pedidos de Venda</a></li>
+                                <li><a href="/admin/simuladordefrete"><i class="fa fa-circle-o"></i> Simulador de Frete</a></li> -->
+                                <li class="treeview">
+                                    <a href="#"><i class="fa fa-circle-o"></i> Mercado Livre
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/statusdevendas"><i class="fa fa-circle-o"></i>Perguntas</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -435,6 +457,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </ul>
                                     <ul class="treeview-menu">
                                         <li><a href="/admin/financeirocategoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-gear"></i> <span>Logistica</span>
+                                <span class="pull-right-container"> 
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/admin/produto"><i class="fa fa-circle-o"></i> Correios</a></li>
+                                <li><a href="/admin/estoque"><i class="fa fa-circle-o"></i> Controle de Estoque</a></li>
+                                <li><a href="/admin/compras"><i class="fa fa-circle-o"></i> Ordem de Compra</a></li>
+                                <li><a href="/admin/inventario"><i class="fa fa-circle-o"></i> Inventário de Estoque</a></li>
+                                <!-- <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxxx</a></li> -->
+                                <li class="treeview">
+                                    <a href="#"><i class="fa fa-circle-o"></i> Configurações
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/categories"><i class="fa fa-circle-o"></i> Categoria</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/gp-produto"><i class="fa fa-circle-o"></i> Grupo de Produto</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/un-produto"><i class="fa fa-circle-o"></i> Unidade de Produto</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="/admin/variacao"><i class="fa fa-circle-o"></i> Variação</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
+                                    </ul>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
                                     </ul>
                                 </li>
                             </ul>

@@ -41,6 +41,8 @@ require_once("controller/produtos.php");
 require_once("controller/correios.php");
 //Vendas
 require_once("controller/vendas.php");
+//Funcionários
+require_once("controller/funcionarioS.php");
 
 $app->run();
 

@@ -13,13 +13,11 @@
 
 <!-- Main content -->
 <section class="content">
-
   <div class="row">
     <div class="col-md-12">
       <div class="box box-primary">
-            
             <div class="box-header">
-              <a href="/admin/contafinanceira/novo" class="btn btn-success">Cadastrar</a>
+              <a href="/admin/contafinanceira/novo" class="btn btn-success">INCLUIR CONTAS FINANCEIRAS</a>
             </div>
 
             <div class="box-body no-padding">

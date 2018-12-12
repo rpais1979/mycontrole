@@ -3,11 +3,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Forma de Pagamento
+    Lista de Funcionários
   </h1>
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active"><a href="/admin/formadepagamento">Forma de Pagamento</a></li>
+    <li class="active"><a href="/admin/funcionario">Funcionários</a></li>
   </ol>
 </section>
 
@@ -16,10 +16,10 @@
 
   <div class="row">
     <div class="col-md-12">
-      <div class="box box-primary">
+        <div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/formadepagamento/novo" class="btn btn-success">INCLUIR FORMA DE PAGAMENTO</a>
+              <a href="/admin/funcionario/novo" class="btn btn-success">INCLUIR FUNCIONÁRIO</a>
             </div>
 
             <div class="box-body no-padding">
@@ -27,25 +27,21 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Forma de Pagamento</th>
-                    <th style="width: 140px">Status</th>
-                    <th class="text-center" style="width: 140px">&nbsp;Ações</th>
+                    <th>Nome do funcionario</th>
+                    <th style="width: 140px">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php $counter1=-1;  if( isset($formadepagamento) && ( is_array($formadepagamento) || $formadepagamento instanceof Traversable ) && sizeof($formadepagamento) ) foreach( $formadepagamento as $key1 => $value1 ){ $counter1++; ?>
-
+                  <?php $counter1=-1;  if( isset($categories) && ( is_array($categories) || $categories instanceof Traversable ) && sizeof($categories) ) foreach( $categories as $key1 => $value1 ){ $counter1++; ?>
                   <tr>
                     <td><?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                    <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
-                      <a href="/admin/formadepagamento/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/formadepagamento/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/funcionario/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/funcionario/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
                   <?php } ?>
-
                 </tbody>
               </table>
             </div>

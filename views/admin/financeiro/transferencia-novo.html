@@ -62,27 +62,26 @@
             </div>
         </div>
     </section>
-
-    <script type="text/javascript">
-        $('#dtemissao').datepicker({
-            format: "dd/mm/yyyy",
-            autoclose: 1,
-            language: "pt-BR",
-            startDate: '+0d',
-        });
-        $('#vencimento').datepicker({
-            format: "dd/mm/yyyy",
-            autoclose: 1,
-            language: "pt-BR",
-            startDate: '+0D',
-        });
-        $('#competencia').datepicker({
-            format: "dd/mm/yyyy",
-            autoclose: 1,
-            language: "pt-BR",
-            startDate: '+0d',
-        });
-    </script>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<script type="text/javascript">
+    $('#dtemissao').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: 1,
+        language: "pt-BR",
+        startDate: '+0d',
+    });
+    $('#vencimento').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: 1,
+        language: "pt-BR",
+        startDate: '+0D',
+    });
+    $('#competencia').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: 1,
+        language: "pt-BR",
+        startDate: '+0d',
+    });
+</script>

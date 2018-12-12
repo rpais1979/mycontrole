@@ -96,6 +96,4 @@ $app->post("/admin/vendas/:idvendas", function($idvendas){
 	
 });
 
-
-
 ?>
